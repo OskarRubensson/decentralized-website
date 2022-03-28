@@ -5,6 +5,8 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import Navigation from './components/Navigation';
+
  /* PAGES */
 import Home from './pages/Home';
 import Pictures from './pages/Pictures';
@@ -12,6 +14,7 @@ import Videos from './pages/Videos';
 
 ReactDOM.render(
   <React.StrictMode>
+    <Navigation />
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
