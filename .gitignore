@@ -22,5 +22,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-/src/videos
-!src/videos/portrait.mp4
+/src/videos/big_buck_bunny_1080p_stereo.ogg
+/src/videos/DanangDrone.mp4
