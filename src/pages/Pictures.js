@@ -8,19 +8,6 @@ function importAll(r) {
 const images = importAll(require.context('../images/', false, /\.(png|jpe?g|svg)$/));
 
 export default function Pictures() {
-  let currentlyLoading = images.length;
-
-  useEffect(() => {
-    console.time();
-  }, []);
-
-  const handleLoad = () => {
-    currentlyLoading--;
-    if (currentlyLoading === 0) {
-      console.timeEnd();
-    }
-  }
-
   return (
     <Container fluid="md">
       <Row>
@@ -31,7 +18,7 @@ export default function Pictures() {
       <Row>
         {images.map((image, index) => (
           <Col md={3} key={`img-${index}`}>
-            <Image src={image} alt={index} style={{width: '100%'}} onLoad={handleLoad}/> 
+            <Image src={image} alt={index} style={{width: '100%'}} /> 
           </Col>
         ))}
       </Row>
