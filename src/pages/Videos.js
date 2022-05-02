@@ -4,7 +4,7 @@ import { Container, Form } from "react-bootstrap";
 function importAll(r) {
   return r.keys().map(r);
 }
-const videos = importAll(require.context('../videos/', false, /\.(mp4|ogg|mov)$/));
+const videos = importAll(require.context('../../public/videos/', false, /\.(mp4|ogg|mov)$/));
 
 export default function Videos() {
   return (
